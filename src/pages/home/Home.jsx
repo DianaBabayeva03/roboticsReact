@@ -22,7 +22,16 @@ const Home = () => {
   }, []);
 
   const addToBasket = (item) => {
-    axios.post("https://664b0dc2a300e8795d44055f.mockapi.io/basket", item);
+    axios.get("https://664b0dc2a300e8795d44055f.mockapi.io/basket")
+    .then(res => {
+      const db = res.data
+      const exitingFile = db.find(x => x.id == item.id)
+      if(exitingFile){
+        axios.put(`https://664b0dc2a300e8795d44055f.mockapi.io/basket/${exitingFile.id}`, {...exitingFile, count: exitingFile.count + 1})
+      } else{
+        axios.post(`https://664b0dc2a300e8795d44055f.mockapi.io/basket`, {...item, count: 1});
+      }
+    })
   };
 
   const addToWishlist = (item) => {
