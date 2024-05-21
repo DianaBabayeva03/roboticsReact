@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.someFeatures{
+    background-image: url('https://preview.colorlib.com/theme/robotics/img/feature-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        // padding: 40px 0;
+        gap: 40px;
+        .someFeaturesText{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            h1{
+                font-size: 36px;
+                font-weight: 600;
+                color: white;
+            }
+            p{
+                font-size: 14px;
+                font-weight: 300;
+                color: white;
+            }
+        }
+        .someFeaturesCards{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            .someFeaturesCard{
+                background-color: white;
+                border-radius: 10px;
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 30px 20px;
+                gap: 15px;
+                transition: 0.5s;
+                .cardTitle{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 10px;
+                    h4{
+                        color: black;
+                        font-size: 18px;
+                        font-weight: 600;   
+                        transition: 0.5s;
+                    }
+                    span{
+                        color: black;
+                        font-size: 20px; 
+                        transition: 0.5s;
+                    }
+                }
+                p{
+                    color:rgb(119, 119, 119);
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+                &:hover .cardTitle h4{
+                    cursor: pointer;
+                    color: rgb(138, 144, 255);
+                    transition: 0.5s;
+                }
+                &:hover .cardTitle span{
+                    cursor: pointer;
+                    color: rgb(138, 144, 255);
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:576px) {
+    .someFeatures{
+        width: 100%;
+        .container{
+            width: 90%;
+            padding: 40px 0;
+            .someFeaturesText{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 5px;
+            }
+            .someFeaturesCards{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                .someFeaturesCard{
+                    width: 95%;
+                    padding: 30px;
+                    .cardTitle{
+                        display: flex;
+                        align-items: flex-start;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.improvedProduction{
+    position: relative;
+    background-image: url('https://preview.colorlib.com/theme/robotics/img/banner-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .productionText{
+            width: 47%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 15px;
+            h1{
+                font-size: 60px;
+                font-weight: 300;
+                line-height: 72px;
+                color: white;
+            }
+            p{
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 23px;
+                color: white;
+            }
+            button{
+                background-color: white;
+                border: 1px solid white;
+                color: black;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 42px;
+                transition: 0.5s ease;
+                padding: 0px 30px;
+                &:hover{
+                    cursor: pointer;
+                    background-color: transparent;
+                    color: white;
+                }
+            }
+        }
+        .productionImg{
+            width: 47%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            img{
+                width: 95%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 576px){
+    .improvedProduction{
+        max-width: 100%;
+        min-height: 100vh;
+        padding-top: 40px;
+        .container{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 40px 0;
+            .productionText{
+                width: 100%;
+                h1{
+                    font-size: 35px;
+                    line-height: 42px;
+                }
+            }
+            .productionImg{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 95%;
+                }
+            }
+        }
+    }
+}

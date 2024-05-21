@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.latestNews{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    .container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+        gap: 40px;
+        .latestNewsText{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1{
+                font-size: 36px;
+                font-weight: 600;
+                color: black;
+            }
+            p{
+                font-size: 14px;
+                font-weight: 300;
+                color: rgb(119, 119, 119);
+            }
+        }
+        .latestNewsCards{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .latestNewsCard{
+                width: 48%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                .cardImg{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                        border-radius: 15px;
+                    }
+                }
+                .cardText{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 15px;
+                    .btns{
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 10px;
+                        button{
+                            border: none;
+                            background-color: rgb(138, 144, 255);
+                            color: white;
+                            font-size: 12px;
+                            font-weight: 400;
+                            transition: 0.5s ease;
+                            padding: 5px 15px;
+                            &:hover{
+                                cursor: pointer;
+                                color: black;
+                                background-color: white;
+                            }
+                        }
+                    }
+                    h3{
+                        cursor: pointer;
+                        color:rgb(34, 34, 34);
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                    p{
+                        color: rgb(119, 119, 119);
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                    span{
+                        color: rgb(34, 34, 34);
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+    .latestNews{
+        width: 100%;
+        .container{
+            width: 90%;
+            .latestNewsText{
+                width: 100%;
+                text-align: center;
+            }
+            .latestNewsCards{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                .latestNewsCard{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+                }
+            }
+        }
+    } 
+}

@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footerBox{
+    background-image: url('https://preview.colorlib.com/theme/robotics/img/footer-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h5{
+            font-size: 14px;
+            font-weight: 300;
+            color: white;
+            span{
+                color: rgb(138, 144, 255);
+            }
+        }
+        .iconBox{
+            width: 18%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            button{
+                width: 23%;
+                background-color: rgb(44, 44, 44);
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                padding: 15px 0;
+                transition: 0.3s ease;
+                &:hover{
+                    background-color: rgb(138, 144, 255);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+    .footerBox{
+        width: 100%;
+        .container{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 15px;
+            .iconBox{
+                width: 60%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+}

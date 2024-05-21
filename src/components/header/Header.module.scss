@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.headerBox{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    .container{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            width: 15%;
+        }
+        .navBar{
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ul{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .iconBox{
+            width: 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            button{
+                background-color: transparent;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                font-size: 18px;
+                border: none;
+                color: white;
+                transition: 0.5s ease;
+                &:hover{
+                    cursor: pointer;
+                    color: rgba(0, 0, 0, 0.678);
+                }
+            }
+            .menu{
+                display: none;
+            }
+        }
+        
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width:576px) {
+    .headerBox{
+        width: 100%;
+        .container{
+            width: 90%;
+            .logo{
+                width: 50%;
+                img{
+                    width: 100%;
+                }
+            }
+            .navBar{
+                display: none;
+            }
+            .iconBox{
+                width: 35%;
+                .menu{
+                    display: flex;
+                    span{
+                        font-size: 22px;
+                        color: white;
+                        transition: 0.5s ease;
+                        &:hover{
+                            cursor: pointer;
+                            color: rgba(0, 0, 0, 0.678);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dashCard{
+    background-color: rgb(230, 230, 230);
+    width: 43%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 10px;
+    gap: 20px;
+    border-radius: 10px;
+    .cardImg{
+        height: 200px;
+        width: 200px;
+        img{
+            height: 200px;
+            width: 200px;
+        }
+    }
+    .cardText{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 5px;
+        h2{
+            font-size: 20px;
+            font-weight: 500;
+            color: black;
+        }
+        p{
+            font-size: 14px;
+            font-weight: 300;
+            color: gray;
+        }
+        span{
+            font-size: 18px;
+            font-weight: 600;
+            color: darkred;
+        }
+    }
+    .btns{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 5px;
+        button{
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 5px 15px;
+            transition: 0.5S ease;
+            border-radius: 2px;
+            &:hover{
+                cursor: pointer;
+                background-color: rgba(0, 0, 139, 0.082);
+                border: 1px solid darkred;
+                color: darkred;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+    .dashCard{
+        width: 80%;
+    }
+}
